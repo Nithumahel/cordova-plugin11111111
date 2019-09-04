@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-js-to-native" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>JsToNative</name>
+    <js-module name="JsToNative" src="www/JsToNative.js">
+        <clobbers target="cordova.plugins.JsToNative" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="JsToNative">
+                <param name="ios-package" value="JsToNative"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/JsToNative.m" />
+    </platform>
+</plugin>
